@@ -1,0 +1,48 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: gray;
+    font-size: 24px;
+}
+
+li{
+    float: left;
+}
+
+.pages {
+    float: right;
+}
+
+#center {
+    position: absolute;
+    left: 48%;
+}
+  
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.pages li a#highlight:hover {
+    background-color: #111;
+}
+  
+h1, p {
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr); 
+    grid-template-rows: repeat(1);
+    grid-gap: 15px;
+}
+
+.gallery > img {
+    column-span: 1;
+}
