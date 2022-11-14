@@ -36,13 +36,45 @@ h1, p {
     text-align: center;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr); 
-    grid-template-rows: repeat(1);
-    grid-gap: 15px;
+img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;;
+    height: 100%;
 }
 
-.gallery > img {
-    column-span: 1;
+@media only screen and (max-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1; 
+        grid-template-rows: auto;
+        grid-gap: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: auto;
+        grid-gap: 15px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: auto;
+        grid-gap: 15px;
+    }
+
+    img {
+        grid-row: span 1;
+        
+    }
+
+    #longIMG {
+        grid-row: span 2;
+    }
 }
