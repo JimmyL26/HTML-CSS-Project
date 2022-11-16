@@ -41,6 +41,11 @@ img {
     object-fit: cover;
     border-radius: 15px;;
     height: 100%;
+    grid-row: span 1;
+}
+
+#longIMG {
+    grid-row: span 2;
 }
 
 @media only screen and (max-width: 768px) {
@@ -68,13 +73,5 @@ img {
         grid-template-rows: auto;
         grid-gap: 15px;
     }
-
-    img {
-        grid-row: span 1;
-        
-    }
-
-    #longIMG {
-        grid-row: span 2;
-    }
 }
+
